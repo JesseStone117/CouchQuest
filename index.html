@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>CouchQuest</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <canvas id="game-canvas" aria-label="CouchQuest game view"></canvas>
+
+      <div id="notice-banner" class="notice-banner hidden"></div>
+
+      <section id="menu-panel" class="menu-panel">
+        <p class="eyebrow">Two-controller browser adventure</p>
+        <h1>CouchQuest</h1>
+        <p class="menu-copy">
+          Player 1 is the hero on the battlefield. Player 2 is the dungeon
+          director, placing enemies, obstacles, and timed challenges with
+          cooldowns.
+        </p>
+
+        <div id="menu-summary" class="menu-summary"></div>
+
+        <div class="menu-actions">
+          <button id="start-button" class="primary-button" type="button">
+            Start Adventure
+          </button>
+          <button id="swap-button" class="secondary-button" type="button">
+            Swap Controller Roles
+          </button>
+          <button id="reroll-button" class="secondary-button" type="button">
+            Roll New Map Preview
+          </button>
+        </div>
+
+        <p class="menu-hint">
+          Press <strong>A</strong> to start, <strong>X</strong> to swap
+          controller roles, and press any button on a controller to wake it up.
+        </p>
+
+        <div id="controller-grid" class="controller-grid"></div>
+
+        <div class="role-guide">
+          <article class="guide-card">
+            <h2>Hero Controls</h2>
+            <p>Left Stick move</p>
+            <p>Right Stick aim</p>
+            <p>A dash</p>
+            <p>X sword sweep</p>
+            <p>B pulse burst</p>
+          </article>
+
+          <article class="guide-card">
+            <h2>Director Controls</h2>
+            <p>Left Stick move the cursor</p>
+            <p>A spawn a goblin</p>
+            <p>X place a rock</p>
+            <p>B drop a hazard</p>
+            <p>Y start a challenge wave</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
